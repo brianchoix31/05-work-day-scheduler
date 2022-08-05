@@ -1,6 +1,15 @@
+:root {
+  --beige: #f4f1de;
+  --yellow: #f2cc8f;
+  --red: #e07a5f;
+  --green: #81b29a;
+  --blue: #3d405b;
+  --gray: #e5e5e5;
+}
+
 body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
+  font-family: 'Bitter', serif;
+  font-size: 18px;
   line-height: 1;
 }
 
@@ -8,21 +17,24 @@ textarea {
   background: transparent;
   border: none;
   resize: none;
-  color: #000000;
-  border-left: 1px solid black;
-  padding: 10px;
+  color: var(--blue);
+  margin-top: 5px;
+  outline: none;
 }
 
 .jumbotron {
+  background-color: var(--blue);
+  color: var(--beige);
   text-align: center;
-  background-color: transparent;
-  color: black;
-  border-radius: 0;
-  border-bottom: 10px solid black;
+  border-bottom: 10px solid var(--green);
 }
 
 .description {
   white-space: pre-wrap;
+}
+
+.container {
+  justify-content: center;
 }
 
 .time-block {
@@ -31,15 +43,19 @@ textarea {
 }
 
 .row {
-  white-space: pre-wrap;
-  height: 80px;
-  border-top: 1px solid white;
+  background-color: var(--gray);
+  height: 60px;
+  margin: 3px;
 }
 
 .hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
+  background-color: var(--beige);
+  color: var(--blue);
+  border-right: 3px solid var(--green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
 }
 
 .past {
@@ -57,15 +73,19 @@ textarea {
   color: white;
 }
 
-.saveBtn {
-  border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #06aed5;
-  color: white;
+.save {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.saveBtn i:hover {
-  font-size: 20px;
-  transition: all 0.3s ease-in-out;
+.saveBtn {
+  background-color: transparent;
+  color: var(--green);
+  border: none;
+}
+
+.saveBtn:hover {
+  font-size: 23px;
+  transition: all 0.2s ease-in-out;
 }
