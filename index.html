@@ -11,9 +11,9 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="./assets/css/style.css"/>
@@ -23,18 +23,15 @@
 
   <body>
     <header class="jumbotron p-4">
-      <h1 class="display-4">Work Day Scheduler</h1>
-      <p class="lead"><i>A simple calendar app for scheduling your work day!</i></p><br>
-      <p id="currentDay" class="lead"></p>
-      <p id="currentTime" class="lead"></p>
+      <h1 class="display-5">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day.</p><br>
+      <p id="day" class="lead"></p>
+      <p id="time" class="lead"></p>
     </header>
 
-    <!-- added root id to this div -->
-    <div class="container" id="root">
-
-      <!-- Timeblocks go here -->
+    <div class="container">
       <div class="row">
-        <div class="col-2 hour">
+        <div class="col-2 hour" id="9">
           9 AM
         </div>
         <div class="col-9">
@@ -46,7 +43,7 @@
       </div>
 
       <div class="row">
-        <div class="col-2 hour">
+        <div class="col-2 hour" id="10">
           10 AM
         </div>
         <div class="col-9">
@@ -58,7 +55,7 @@
       </div>
 
       <div class="row">
-        <div class="col-2 hour">
+        <div class="col-2 hour" id="11">
           11 AM
         </div>
         <div class="col-9">
@@ -70,7 +67,7 @@
       </div>
 
       <div class="row">
-        <div class="col-2 hour">
+        <div class="col-2 hour" id="12">
           12 PM
         </div>
         <div class="col-9">
@@ -82,7 +79,7 @@
       </div>
 
       <div class="row">
-        <div class="col-2 hour">
+        <div class="col-2 hour" id="1">
           1 PM
         </div>
         <div class="col-9">
@@ -94,7 +91,7 @@
       </div>
 
       <div class="row">
-        <div class="col-2 hour">
+        <div class="col-2 hour" id="2">
           2 PM
         </div>
         <div class="col-9">
@@ -106,7 +103,7 @@
       </div>
 
       <div class="row">
-        <div class="col-2 hour">
+        <div class="col-2 hour" id="3">
           3 PM
         </div>
         <div class="col-9">
@@ -118,7 +115,7 @@
       </div>
 
       <div class="row">
-        <div class="col-2 hour">
+        <div class="col-2 hour" id="4">
           4 PM
         </div>
         <div class="col-9">
@@ -130,7 +127,7 @@
       </div>
 
       <div class="row">
-        <div class="col-2 hour">
+        <div class="col-2 hour" id="5">
           5 PM
         </div>
         <div class="col-9">
@@ -140,7 +137,6 @@
           <button class="saveBtn"><i class="fa-solid fa-floppy-disk fa-xl"></i></button>
         </div>
       </div>
-      
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
