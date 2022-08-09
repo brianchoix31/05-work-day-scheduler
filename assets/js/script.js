@@ -1,18 +1,10 @@
+// displays current date and time pulled from moment.js
 var today = moment();
 $('#day').text(today.format('[Today is] dddd, MMM Do, YYYY.'));
 var time = moment();
 $('#time').text(time.format('[Time is] h:mm:ss A.'));
 
-var saveBtn = $('.saveBtn');
-saveBtn.on('click', function() { 
-    var time = $(this).parent().parent().attr('id');
-    console.log(time);
-    var task = $(this).parent().siblings('.note').children('.task').val();
-    console.log(task);
-
-    localStorage.setItem(time, task);
-})
-
+// current time is converted to 24 hour format to be compared to the id of the time block in order for the looped function to determine a background color for each row
 function noteBgColor() {
     var currentHour = moment().hours();
     console.log(currentHour);
@@ -20,7 +12,6 @@ function noteBgColor() {
     $('.note').each(function() {
         var rowHour = parseInt($(this).parent().attr('id'));
         console.log(rowHour);
-        // console.log($(this));
      
      if (currentHour === rowHour) {
         $(this).addClass('present');
@@ -36,14 +27,25 @@ function noteBgColor() {
     })
 }
 noteBgColor();
-// setInterval(noteBgColor, 1000);
 
-$('#9 .task').val(localStorage.getItem('9'));
-$('#10 .task').val(localStorage.getItem('10'));
-$('#11 .task').val(localStorage.getItem('11'));
-$('#12 .task').val(localStorage.getItem('12'));
-$('#13 .task').val(localStorage.getItem('13'));
-$('#14 .task').val(localStorage.getItem('14'));
-$('#15 .task').val(localStorage.getItem('15'));
-$('#16 .task').val(localStorage.getItem('16'));
-$('#17 .task').val(localStorage.getItem('17'));
+// targets the pathed values needed to be save in local storage upon clicking save button
+var saveBtn = $('.saveBtn');
+saveBtn.on('click', function() { 
+    var time = $(this).parent().parent().attr('id');
+    console.log(time);
+    var text = $(this).parent().siblings('.note').children('.text').val();
+    console.log(text);
+
+    localStorage.setItem(time, text);
+})
+
+// retrieves value set in local storage to be placed back into note section that was originally saved in when page is refreshed
+$('#9 .text').val(localStorage.getItem('9'));
+$('#10 .text').val(localStorage.getItem('10'));
+$('#11 .text').val(localStorage.getItem('11'));
+$('#12 .text').val(localStorage.getItem('12'));
+$('#13 .text').val(localStorage.getItem('13'));
+$('#14 .text').val(localStorage.getItem('14'));
+$('#15 .text').val(localStorage.getItem('15'));
+$('#16 .text').val(localStorage.getItem('16'));
+$('#17 .text').val(localStorage.getItem('17'));
