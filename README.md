@@ -15,7 +15,7 @@ With the given source code, the fifth Challenge must meet the following criteria
 <img src="https://user-images.githubusercontent.com/108188990/183734570-25640f84-2a47-4a45-bfe2-5003fc7dc0a1.png">
 
 ## Link to Deployed GitHub Page
-<a href="https://brianchoix31.github.io/03-password-generator/">Deployed GitHub Page</a>
+<a href="https://brianchoix31.github.io/05-work-day-scheduler/">Deployed GitHub Page</a>
 
 ## Link to GitHub Repository
 <a href="https://github.com/brianchoix31/05-work-day-scheduler">GitHub Repository</a>
